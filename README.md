@@ -10,7 +10,7 @@ parameters from your training set; you can then use prediction mode to make pred
 
 # Program 2
 
-Program represetns a deep neural networkm written using Google TensorFlow Python library, which supports the following modes:
+Program represents a deep neural networkm written using Google TensorFlow Python library, which supports the following modes:
 1. A standard single hidden layer neural network
 2. An arbitrarily deep neural network
 3. Both classifcation and regression modes
