@@ -1,0 +1,8 @@
+1.  We are to implement a tool for creating neural networks of arbitrary size
+  using tensorflow computational graphs, which will support two modes.
+  Additionally, we are to do data preprocessing for minibatching.
+2. We believe that learning  tensorflow and working with python will be the most
+  challenging aspects of the assignment, since both of us are new to that.
+3. We are planning to complete all the parts.
+4. MT form 4pm-whenever
+5. Documentation, videos, office hours.

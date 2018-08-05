@@ -1,0 +1,34 @@
+1.  Which of the following features were implemented, and which were not:
+ • Single hidden layer classification model       -  Yes
+ • Single hidden layer regression model           -  Yes
+ • Single hidden layer minibatching               -  Yes
+ • Arbitrary hidden layer classification model    -  Yes
+ • Arbitrary hidden layer regression model        -  Yes
+ • Arbitrary hidden layer minibatching            -  Yes
+2.  Declare/discuss any aspects of your program that is not working.
+  Everything is working in at least some capacity.  As will be discussed in part 3,
+  it is difficult to confirm that the results are correct, since there is randomization
+  involved in the computation, and we don't know if high loss values are due to a
+  problem with the code or the parameters we used.
+3.  In a few sentences, describe how you tested that your code was working.
+  We ran our program on several of the datasets using different parameters, and
+  printed some items from the final dev set predictions, which we compared to other
+  students results.  Having access to the model predictions also allowed us to verify
+  that the model outputs were reasonable.
+4.  What was the most challenging aspect of this assignment, and why?
+  Testing was a major difficulty, as was lack of familiarity with the tools,
+  (Tensorflow and numpy) which led to several errors regarding the forming of layers
+  and managing of data.
+5.  If you implemented minibatching, how did it affect the training time (both in terms of
+per-epoch speed but also in terms of the total time to get a good result).
+  Minibatching had variable impact on the per-epoch run time of the program. For
+  small minibatch sizes, the runtime was substantially worse (~1.4 sec/epoch @ 10,
+  vs ~0.1 sec/epoch without batching), but as the minibatch size increased, the
+  performance gap narrowed.  In terms of number of epochs needed for the model to
+  converge, minibatching of any size seemed to require slightly fewer (~17 on dataset 1,
+  vs ~21 without batching).
+6.  If you implemented arbitrarily deep neural networks,  how did training deeper models
+affect development set accuracy.
+  The effect of adding more layers to the network depends on the dataset in question.
+  For some datasets (eg. dataset 6) more layers produced a higher accuracy.  For others,
+  especially the small datasets, adding more layers reduced the final accuracy.
