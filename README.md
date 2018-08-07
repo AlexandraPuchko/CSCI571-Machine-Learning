@@ -7,12 +7,16 @@ Program that trains and evaluates linear regression models. The source code is w
 Program supports three use modes: training, prediction and evaluation. Training is the mode in which you estimate your
 parameters from your training set; you can then use prediction mode to make predictions on new data points, or evaluation mode to make predictions on new data points and evaluate their performance against the correct outputs.
 
-The program takes command line arguments with the following structure (Java Apache Math Commons Library should be included into the folder with a source file)
-java Prog1 [-train x.txt y.txt out.model [a | g ss st]
+### Getting Started
+
+The program takes command line arguments with the following structure (Java Apache Math Commons Library should be included into the folder with a source file):
+```
+ java Prog1 [-train x.txt y.txt out.model [a | g ss st]
 | -pred x.txt in.model out.predictions
 | -eval x.txt y.txt in.model ] N D K
+```
 
-Specifcally, the arguments are
+### Specifcally, the arguments are
 1. The mode of operation (exactly one of -train, -pred or -eval)
 * If training mode 
 ag -train is present, it should be immediately followed by:
