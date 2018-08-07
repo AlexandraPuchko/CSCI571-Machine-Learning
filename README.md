@@ -1,7 +1,7 @@
 # CSCI571-Machine-Learning
 
 
-# Program 1
+## Program 1
 
 Program that trains and evaluates linear regression models. The source code is written in Java.
 Program supports three use modes: training, prediction and evaluation. Training is the mode in which you estimate your
@@ -14,7 +14,7 @@ java Prog1 [-train x.txt y.txt out.model [a | g ss st]
 
 Specifcally, the arguments are
 1. The mode of operation (exactly one of -train, -pred or -eval)
- If training mode 
+* If training mode 
 ag -train is present, it should be immediately followed by:
 (a) The input feature le x.txt. This contains one line per datapoint in your
 training set; each line consists of D space-delimited numbers, printed in decimal
@@ -28,7 +28,7 @@ scientific notation with three decimal places: w0;w1; : : : ;wD.
 (d) The training algorithm to use: analytical solution (a) or gradient descent (g).
 If gradient descent is selected, it should be immediately followed by the step
 size ss and stopping threshold st.
- If prediction mode 
+* If prediction mode 
 ag -pred is present, it should be immediately followed by:
 (a) The input feature le x.txt. This contains one line per datapoint in your
 held out (e.g. development or test) set; each line consists of D space-delimited
@@ -38,7 +38,7 @@ same model file format described above.
 (c) The filename where your predictions will be saved. The predictions le should
 have exactly one line per datapoint: the ith line contains your prediction for
 the ith data point, printed in scientific notation, with three decimal places.
- If evaluation mode 
+* If evaluation mode 
 ag -eval is present, it should be immediately followed by:
 4
 (a) The input feature file x.txt. This contains one line per datapoint in your held
@@ -61,7 +61,7 @@ Example calls to the program are:
 ./prog1 -eval dev_x.txt dev_y.txt myOther.model 500 3 1
 
 
-# Program 2
+## Program 2
 
 Program represents a deep neural network written in Google TensorFlow Python library, which supports the following modes:
 1. A standard single hidden layer neural network
