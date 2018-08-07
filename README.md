@@ -8,6 +8,7 @@ Program supports three use modes:
 * training, 
 * prediction
 * evaluation. 
+
 Training is the mode in which you estimate your parameters from your training set; you can then use prediction mode to make predictions on new data points, or evaluation mode to make predictions on new data points and evaluate their performance against the correct outputs.
 
 ### Getting Started
