@@ -108,10 +108,9 @@ set performance after each update (see Section on Program Output later).
 floating point values (where D is the feature dimension).
 3. TRAIN_TARGET_FN: the name of the training set target (label) file. If PROBLEM_MODE (see
 below) is C (for classification) this should be a file with N lines, where each line contains
-a single integer in the set f0; 1; : : : ;C 􀀀1g indicating the class label. If PROBLEM_MODE is
+a single integer in the set {0, 1,...,C - 1} indicating the class label. If PROBLEM_MODE is
 R (for regression), this should be a file with N lines, where each line contains C space-
-delimited 
-oating point values. In either case, this file contains the true outputs for all
+delimited  floating point values. In either case, this file contains the true outputs for all
 N datapoints.
 4. DEV_FEAT_FN: the name of the development set feature file, in the same format as
 TRAIN_FEAT_FN.
