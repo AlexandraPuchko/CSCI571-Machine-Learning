@@ -59,10 +59,12 @@ same model file format described above.
 Note that if K > 1 then D must equal 1. If this is not the case, then your program should
 print an error message and exit.
 Example calls to the program are:
+```
 * ./prog1 -train train_x.txt train_y.txt my.model a 10000 3 1
 * ./prog1 -pred dev_x.txt my.model my.predictions 500 3 1
 * ./prog1 -train train_x.txt train_y.txt myOther.model g 0.1 0.05 10000 3 1
 * ./prog1 -eval dev_x.txt dev_y.txt myOther.model 500 3 1
+```
 
 
 ## Program 2
