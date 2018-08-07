@@ -141,4 +141,6 @@ training when minibatching is supported.
 15. NUM_HIDDEN_LAYERS: (Optional) If arbitrarily deep neural networks are supported, this
 is the number of hidden layers in your neural network.
 
-
+### Authors
+* Alexandra Puchko
+* Edward Nestor
