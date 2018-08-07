@@ -105,8 +105,7 @@ prog2.py [-v]
 set performance after each update (see Section on Program Output later).
 2. TRAIN_FEAT_FN: the name of the training set feature file. The file should contain N lines
 (where N is the number of data points), and each line should contains D space-delimited
-
-oating point values (where D is the feature dimension).
+floating point values (where D is the feature dimension).
 3. TRAIN_TARGET_FN: the name of the training set target (label) file. If PROBLEM_MODE (see
 below) is C (for classification) this should be a file with N lines, where each line contains
 a single integer in the set f0; 1; : : : ;C 􀀀1g indicating the class label. If PROBLEM_MODE is
