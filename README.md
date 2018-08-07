@@ -68,7 +68,8 @@ Example calls to the program are:
  ./prog1 -train train_x.txt train_y.txt myOther.model g 0.1 0.05 10000 3 1
  ./prog1 -eval dev_x.txt dev_y.txt myOther.model 500 3 1
 ```
-
+### Authors
+* Alexandra Puchko
 
 ## Program 2
 
