@@ -123,7 +123,7 @@ on Minibatch Training later).
 7. LEARNRATE: the step size to use for training.
 8. NUM_HIDDEN_UNITS: the dimension of the hidden layers (aka number of hidden units per
 hidden layer). All hidden layers will have this same size.
-9. PROBLEM_MODE: this should be either C (to indicate classication) or R (to indicate re-
+9. PROBLEM_MODE: this should be either C (to indicate classification) or R (to indicate re-
 gression).
 10. HIDDEN_UNIT_ACTIVATION: this is the element-wise, non-linear function to apply at each
 hidden layer, and can be sig (for logistic sigmoid), tanh (for hyperbolic tangent) or relu
@@ -132,7 +132,7 @@ hidden layer, and can be sig (for logistic sigmoid), tanh (for hyperbolic tangen
 ow's optimizer you wish to use (can be adam, momentum or grad).
 3
 12. INIT_RANGE: all of your weights (including bias vectors) should be initialized uniformly
-random in the range [􀀀INIT RANGE; INIT RANGE). Hint: see tf.random_uniform.
+random in the range [-INIT RANGE; INIT RANGE). Hint: see tf.random_uniform.
 13. C: (Required only for classification) the number of classes.
 14. MINIBATCH_SIZE: (Optional) If minibatching is implemented, this specifies the number
 of data points to be included in each minibatch. Set this value to 0 to do full batch
