@@ -54,7 +54,7 @@ the ith data point, printed in scientific notation, with three decimal places.
 
 * If evaluation mode 
 ag -eval is present, it should be immediately followed by:
-4
+
 (a) The input feature file x.txt. This contains one line per datapoint in your held
 out (e.g. development) set; each line consists of D space-delimited numbers,
 printed in decimal notation.
