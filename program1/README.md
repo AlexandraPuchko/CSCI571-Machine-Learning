@@ -22,21 +22,21 @@ The program takes command line arguments with the following structure (Java Apac
 * If training mode 
 ag -train is present, it should be immediately followed by:
 
-(a) The input feature file x.txt. This contains one line per datapoint in your
-training set; each line consists of D space-delimited numbers, printed in decimal
-notation (D is the dimensionality of the input feature vector x).
+  (a) The input feature file x.txt. This contains one line per datapoint in your
+  training set; each line consists of D space-delimited numbers, printed in decimal
+  notation (D is the dimensionality of the input feature vector x).
 
-(b) The target file y.txt. This contains one line per datapoint in your training
-set; each line consists of the regression target for that datapoint, in decimal
-notation.
+  (b) The target file y.txt. This contains one line per datapoint in your training
+  set; each line consists of the regression target for that datapoint, in decimal
+  notation.
 
-(c) The filename to write the trained model out.model. This model, as described
-in the Overview, consists of D + 1 space-delimited numbers, each printed in
-scientific notation with three decimal places: w0,w1,...,wD.
+  (c) The filename to write the trained model out.model. This model, as described
+  in the Overview, consists of D + 1 space-delimited numbers, each printed in
+  scientific notation with three decimal places: w0,w1,...,wD.
 
-(d) The training algorithm to use: analytical solution (a) or gradient descent (g).
-If gradient descent is selected, it should be immediately followed by the step
-size ss and stopping threshold st.
+  (d) The training algorithm to use: analytical solution (a) or gradient descent (g).
+  If gradient descent is selected, it should be immediately followed by the step
+  size ss and stopping threshold st.
 
 * If prediction mode 
 ag -pred is present, it should be immediately followed by:
