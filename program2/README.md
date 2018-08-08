@@ -8,7 +8,6 @@ Program represents a deep neural network written in Google TensorFlow Python lib
 
 ### Getting started
 The neural network code should support the following command line argument structure:
-usage: 
 ```
 prog2.py [-v]
          -train_feat TRAIN_FEAT_FN
