@@ -21,6 +21,7 @@ The program takes command line arguments with the following structure (Java Apac
 1. The mode of operation (exactly one of -train, -pred or -eval)
 * If training mode 
 ag -train is present, it should be immediately followed by:
+
 (a) The input feature file x.txt. This contains one line per datapoint in your
 training set; each line consists of D space-delimited numbers, printed in decimal
 notation (D is the dimensionality of the input feature vector x).
