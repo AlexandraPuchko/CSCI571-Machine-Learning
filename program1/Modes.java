@@ -18,7 +18,7 @@ import org.apache.commons.math3.linear.RealVector;
 	1) prediction and evaluation modes
 	2) the analytical solution training mode
 	3) the gradient descent training mode
-	+  polynomial features
+	+  polynomial features expansion
 */
 public class Modes{
 	
