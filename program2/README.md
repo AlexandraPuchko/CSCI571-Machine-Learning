@@ -48,8 +48,7 @@ on Minibatch Training later).
 7. *LEARNRATE*: the step size to use for training.
 8. *NUM_HIDDEN_UNITS*: the dimension of the hidden layers (aka number of hidden units per
 hidden layer). All hidden layers will have this same size.
-9. *PROBLEM_MODE*: this should be either C (to indicate classification) or R (to indicate re-
-gression).
+9. *PROBLEM_MODE*: this should be either C (to indicate classification) or R (to indicate regression).
 10. *HIDDEN_UNIT_ACTIVATION*: this is the element-wise, non-linear function to apply at each
 hidden layer, and can be sig (for logistic sigmoid), tanh (for hyperbolic tangent) or relu
 (for rectified linear unit).
