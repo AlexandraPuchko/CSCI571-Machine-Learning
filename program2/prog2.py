@@ -95,6 +95,7 @@ def loadData(options):
     return (train_x, train_y, dev_x, dev_y)
 
 def addLayer(previousOutput, options, init, layerNum):
+    # apply post-activation function; tanh is default
     if options.hidden_act == "relu" :
         act = tf.nn.relu
     elif options.hidden_act == "sig" :
@@ -122,6 +123,7 @@ def buildGraph(xShape, yShape, options):
 
     baseInitalizer = tf.random_uniform_initializer(-options.init_range, options.init_range)
 
+    # add required number of layers
     for i in range(options.nlayers):
         currLayer = addLayer(currLayer, options, baseInitalizer, i)
 
@@ -134,11 +136,13 @@ def buildGraph(xShape, yShape, options):
                             activation=None,
                             name="outputLayer")
 
+    # compute loss depending on the problem type
     if options.type == "c":
         lossVar = tf.losses.softmax_cross_entropy(y_data,output)
     else:
         lossVar = tf.losses.mean_squared_error(y_data, output)
 
+    # apply optimizer (momentum = 0.5 is the default one)
     momentum  = 0.5
     if(options.optimizer == "adam"):
         optimizer = tf.train.AdamOptimizer(options.learnrate).minimize(lossVar)
@@ -163,6 +167,7 @@ def computeAccuracy(y_hat, y):
 
 
 def main():
+    # parse all arguments
     options = parseArgs()
     (tx, ty, dx, dy) =  loadData(options)
 
@@ -176,11 +181,12 @@ def main():
         lineLabel = "Update"
     else:
         lineLabel = "Epoch"
-
+        
+    # start session
     tfSess = tf.Session()
     tfSess.run(fetches=[init])
 
-
+    # if minibatch size is provided, use it; otherwise go throught the whole set of training points
     if options.mb > 0:
         batcher = minibatcher(tx, ty, options.mb)
     else:
@@ -190,15 +196,21 @@ def main():
     startTime = time.clock()
     epoch = 1
     update = 0
+    
+    # go through each epoch
     while epoch <= options.epochs:
+        # take one batch
         batch = batcher.next()
         if batch != None:
             (batchX, batchY) =  (batch[0], convertDimensions(batch[1]))
+            # increment update
             update += 1
             batch = None
-
+            
+            
             (trainLoss, opt, prediction) = tfSess.run(fetches=[loss, optimizer, output], feed_dict={x_input : batchX, y_input : batchY})
-
+            
+            # compute loss
             if options.type == "c":
                 trainLoss = computeAccuracy(prediction, batchY)
 
