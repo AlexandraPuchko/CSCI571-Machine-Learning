@@ -68,7 +68,7 @@ ag -eval is present, it should be immediately followed by:
 
 2. The number of datapoints in your dataset (i.e. the number of lines in x.txt).
 3. The dimensionality of your input vectors (i.e. the # of numbers per line in x.txt).
-4. The order of polynomial to t. K should be 1 for linear regression.
+4. The order of polynomial to fit. K should be 1 for linear regression.
 Note that if K > 1 then D must equal 1. If this is not the case, then your program should
 print an error message and exit.
 Example calls to the program are:
